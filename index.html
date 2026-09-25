@@ -6,7 +6,7 @@
 
   <title>Adraz Model Management | Ibadan & Abeokuta Models</title>
 
-  <meta name="description" content="Adraz Model Management connects makeup artists, photographers, brands and creatives with professional models in Ibadan and Abeokuta.">
+  <meta name="description" content="Adraz Model Management connects creatives, brands, makeup artists and photographers with professional models in Ibadan and Abeokuta.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -26,10 +25,20 @@
     }
 
     body {
-      background: #f7f4ef;
-      color: #171513;
       font-family: 'Montserrat', sans-serif;
+      background: #0c0c0c;
+      color: #f4efe7;
       line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     /* NAVIGATION */
@@ -40,34 +49,36 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(15, 14, 13, 0.90);
+      padding: 20px 7%;
+      background: rgba(12, 12, 12, 0.9);
       backdrop-filter: blur(10px);
     }
 
     .logo {
-      color: #f4ead8;
-      text-decoration: none;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
-      letter-spacing: 4px;
+      font-size: 28px;
+      letter-spacing: 3px;
       font-weight: 600;
     }
 
-    nav a {
-      color: #f4ead8;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
     }
 
-    nav a:hover {
-      color: #c8a96b;
+    nav ul li a {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.6;
     }
 
     /* HERO */
@@ -78,17 +89,10 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
-
-      background:
-        linear-gradient(
-          rgba(10, 9, 8, 0.40),
-          rgba(10, 9, 8, 0.72)
-        ),
-        url("IMG_2379.jpeg") center center / cover no-repeat;
-
-      color: white;
       padding: 100px 20px 60px;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.72)),
+        url('IMG_2379.jpeg') center/cover no-repeat;
     }
 
     .hero-content {
@@ -96,419 +100,364 @@
     }
 
     .small-title {
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 5px;
       text-transform: uppercase;
-      margin-bottom: 18px;
-      color: #e3c98e;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(55px, 9vw, 105px);
-      font-weight: 500;
-      line-height: 0.9;
+      font-size: clamp(55px, 9vw, 110px);
+      line-height: 0.95;
       letter-spacing: 2px;
       margin-bottom: 25px;
     }
 
     .hero p {
-      max-width: 620px;
-      margin: 0 auto 30px;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .hero-location {
-      font-size: 11px;
+      font-size: 14px;
       letter-spacing: 4px;
+      text-transform: uppercase;
       margin-bottom: 35px;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 27px;
-      border: 1px solid #d2b575;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
+      padding: 15px 30px;
+      border: 1px solid #f4efe7;
+      font-size: 11px;
       letter-spacing: 2px;
-      font-size: 10px;
+      text-transform: uppercase;
       transition: 0.3s;
+      margin: 5px;
     }
 
     .btn:hover {
-      background: #d2b575;
-      color: #171513;
+      background: #f4efe7;
+      color: #0c0c0c;
     }
 
-    /* GENERAL */
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 90px 6%;
-    }
-
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #a08042;
-      margin-bottom: 12px;
+      padding: 100px 7%;
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(42px, 6vw, 68px);
-      font-weight: 500;
-      line-height: 1;
-      margin-bottom: 25px;
+      text-align: center;
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      text-align: center;
+      color: #c8c1b8;
+      font-size: 14px;
     }
 
     /* ABOUT */
 
     .about {
-      max-width: 1050px;
-      margin: auto;
-      text-align: center;
+      background: #111111;
     }
 
-    .about p {
-      max-width: 800px;
+    .about-text {
+      max-width: 850px;
       margin: auto;
-      font-size: 14px;
-      color: #55504a;
+      text-align: center;
+      color: #d4cec5;
+      font-size: 15px;
       line-height: 2;
     }
 
     /* SERVICES */
 
-    .services {
-      background: #171513;
-      color: #f7f4ef;
-    }
-
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      margin-top: 50px;
-      background: #514a41;
-    }
-
-    .service {
-      background: #171513;
-      padding: 45px 30px;
-      min-height: 230px;
-    }
-
-    .service-number {
-      color: #c8a96b;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-    }
-
-    .service h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 35px;
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-
-    .service p {
-      color: #c5c0b8;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    /* MODELS */
-
-    .models-header {
-      max-width: 850px;
-      margin-bottom: 50px;
-    }
-
-    .models-header p {
-      color: #625c54;
-      font-size: 14px;
-      max-width: 650px;
-    }
-
-    .models-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
-    .model-card {
-      background: white;
-      overflow: hidden;
-      border: 1px solid #e5dfd5;
+    .service {
+      border: 1px solid #292929;
+      padding: 40px 30px;
+      text-align: center;
     }
 
-    .model-image {
+    .service h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      font-size: 13px;
+      color: #bdb6ad;
+      line-height: 1.8;
+    }
+
+    /* MODELS */
+
+    .models {
+      background: #111111;
+    }
+
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px 22px;
+    }
+
+    .model-card {
+      background: #171717;
+      overflow: hidden;
+    }
+
+    .model-card img {
       width: 100%;
-      aspect-ratio: 4 / 5;
+      height: 470px;
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease;
     }
 
-    .model-card:hover .model-image {
-      transform: scale(1.035);
+    .model-card:hover img {
+      transform: scale(1.03);
     }
 
     .model-info {
-      padding: 20px;
+      padding: 22px 20px 25px;
     }
 
-    .model-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 29px;
-      font-weight: 600;
+    .model-info h3 {
+      font-size: 30px;
       margin-bottom: 5px;
     }
 
-    .model-type {
-      color: #81776c;
-      font-size: 9px;
-      letter-spacing: 1.8px;
+    .model-info p {
+      color: #a9a29a;
+      font-size: 11px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
-    .book-btn {
+    .model-btn {
       display: inline-block;
-      text-decoration: none;
-      color: #171513;
-      border-bottom: 1px solid #c8a96b;
-      padding-bottom: 4px;
-      font-size: 9px;
-      letter-spacing: 2px;
+      border: 1px solid #8f887f;
+      padding: 10px 16px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+      transition: 0.3s;
     }
 
-    .book-btn:hover {
-      color: #a08042;
+    .model-btn:hover {
+      background: #f4efe7;
+      color: #111;
+      border-color: #f4efe7;
     }
 
-    /* BOOKING */
+    /* MORE MODELS */
 
-    .booking {
-      background: #e9e1d4;
+    .more-models {
       text-align: center;
+      margin-top: 60px;
+      padding: 40px 25px;
+      border: 1px solid #302f2d;
     }
 
-    .booking-grid {
-      max-width: 900px;
-      margin: 45px auto 0;
+    .more-models h3 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .more-models p {
+      color: #bdb6ad;
+      font-size: 13px;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+      gap: 20px;
     }
 
-    .step {
-      padding: 25px 15px;
-      background: rgba(255,255,255,0.45);
+    .process-step {
+      text-align: center;
+      padding: 30px 15px;
     }
 
-    .step-number {
+    .number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 35px;
-      color: #a08042;
+      font-size: 50px;
+      margin-bottom: 10px;
     }
 
-    .step h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 23px;
-      margin: 5px 0;
+    .process-step h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
     }
 
-    .step p {
-      font-size: 10px;
-      color: #6d655c;
+    .process-step p {
+      font-size: 12px;
+      color: #aaa39b;
     }
 
     /* WHY ADRAZ */
 
     .why {
-      background: #f7f4ef;
+      background: #111111;
     }
 
     .why-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      margin-top: 45px;
+      gap: 20px;
+      text-align: center;
     }
 
     .why-item {
-      border-top: 1px solid #cdbb99;
-      padding-top: 20px;
+      padding: 25px 15px;
     }
 
     .why-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
+      font-size: 25px;
       margin-bottom: 10px;
     }
 
     .why-item p {
-      font-size: 11px;
-      color: #6d655c;
-      line-height: 1.8;
+      font-size: 12px;
+      color: #aaa39b;
     }
 
     /* CONTACT */
 
     .contact {
-      min-height: 550px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      color: white;
-
       background:
-        linear-gradient(
-          rgba(10, 9, 8, 0.60),
-          rgba(10, 9, 8, 0.78)
-        ),
-        url("IMG_2379.jpeg") center / cover no-repeat;
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)),
+        url('IMG_2379.jpeg') center/cover no-repeat;
     }
 
     .contact h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(50px, 7vw, 85px);
-      font-weight: 500;
-      line-height: 0.95;
-      margin-bottom: 25px;
+      font-size: 65px;
+      margin-bottom: 20px;
     }
 
     .contact p {
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #d2cbc3;
+      font-size: 14px;
     }
 
-    .social {
+    .social-links {
       margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
-    .social a {
-      color: #e3c98e;
-      text-decoration: none;
-      font-size: 11px;
-      letter-spacing: 2px;
+    .social-links a {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #777;
+      padding-bottom: 5px;
     }
 
     /* FOOTER */
 
     footer {
-      background: #11100f;
-      color: #aaa39a;
+      padding: 35px 7%;
       text-align: center;
-      padding: 35px 20px;
-    }
-
-    footer .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      color: #f4ead8;
-      font-size: 28px;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      background: #080808;
+      color: #8d8780;
+      font-size: 11px;
+      letter-spacing: 1px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
 
       nav {
-        padding: 15px 5%;
+        padding: 18px 5%;
       }
 
-      .logo {
-        font-size: 25px;
-      }
-
-      nav div a {
-        margin-left: 10px;
-        font-size: 8px;
-      }
-
-      section {
-        padding: 70px 5%;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .models-grid {
-        grid-template-columns: repeat(2, 1fr);
+      nav ul {
         gap: 12px;
       }
 
-      .model-info {
-        padding: 14px;
+      nav ul li a {
+        font-size: 9px;
       }
 
-      .model-name {
-        font-size: 24px;
-      }
-
-      .booking-grid {
+      .services-grid,
+      .models-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .process-grid,
       .why-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .model-card img {
+        height: 420px;
+      }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
+
+      nav {
+        position: absolute;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
 
       .hero h1 {
-        font-size: 58px;
+        font-size: 55px;
       }
 
       .hero p {
         font-size: 10px;
-        letter-spacing: 1.5px;
+        letter-spacing: 2px;
       }
 
-      .models-grid {
-        grid-template-columns: 1fr 1fr;
+      section {
+        padding: 75px 5%;
       }
 
-      .model-name {
-        font-size: 21px;
+      .section-title {
+        font-size: 45px;
       }
 
-      .model-type {
-        font-size: 7px;
-      }
-
-      .book-btn {
-        font-size: 7px;
-      }
-
-      .booking-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
+      .services-grid,
+      .models-grid,
+      .process-grid,
       .why-grid {
         grid-template-columns: 1fr;
       }
-    }
 
+      .model-card img {
+        height: 500px;
+      }
+
+      .contact h2 {
+        font-size: 48px;
+      }
+    }
   </style>
 </head>
 
@@ -517,49 +466,43 @@
   <!-- NAVIGATION -->
 
   <nav>
+    <div class="logo">ADRAZ</div>
 
-    <a href="#top" class="logo">
-      ADRAZ
-    </a>
-
-    <div>
-      <a href="#models">Models</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Book</a>
-    </div>
-
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#models">Models</a></li>
+      <li><a href="#contact">Book</a></li>
+    </ul>
   </nav>
 
 
   <!-- HERO -->
 
-  <section class="hero" id="top">
+  <section class="hero">
 
     <div class="hero-content">
 
-      <div class="small-title">
-        Adraz Model Management
-      </div>
+      <div class="small-title">Adraz Model Management</div>
 
-      <h1>
-        The face of your next campaign.
-      </h1>
+      <h1>The face of your next campaign.</h1>
 
-      <p>
-        Beauty · Commercial · Editorial
-      </p>
+      <p>Beauty · Commercial · Editorial</p>
 
-      <div class="hero-location">
-        IBADAN · ABEOKUTA · NIGERIA
-      </div>
+      <p>IBADAN · ABEOKUTA · NIGERIA</p>
 
       <a
         class="btn"
-        href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%27d%20like%20to%20enquire%20about%20booking%20a%20model."
+        href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%20would%20like%20to%20book%20a%20model."
         target="_blank">
-
         Book a Model
+      </a>
 
+      <a
+        class="btn"
+        href="https://www.instagram.com/Adraz_models/"
+        target="_blank">
+        Instagram
       </a>
 
     </div>
@@ -569,24 +512,18 @@
 
   <!-- ABOUT -->
 
-  <section class="about">
+  <section class="about" id="about">
 
-    <div class="section-label">
-      About Adraz
-    </div>
+    <h2 class="section-title">About Adraz</h2>
 
-    <h2 class="section-title">
-      Faces made for your vision.
-    </h2>
-
-    <p>
-      Adraz Model Management is a facial modelling agency connecting
-      creatives and brands with talent for beauty, commercial and
-      editorial projects. Based in Ibadan and serving Abeokuta, we make
-      it easier to discover and book models suited to your creative brief.
-      From beauty campaigns and makeup portfolios to brand content and
-      editorial shoots, we help bring ideas to life through the right
-      faces, professional communication and a seamless booking experience.
+    <p class="about-text">
+      Adraz Model Management is a facial modelling agency connecting creatives
+      and brands with talent for beauty, commercial and editorial projects.
+      Based in Ibadan and serving Abeokuta, we make it easier to discover and
+      book models suited to your creative brief.
+      From beauty campaigns and makeup portfolios to brand content and editorial
+      shoots, we help bring ideas to life through the right faces,
+      professional communication and a seamless booking experience.
     </p>
 
   </section>
@@ -594,69 +531,39 @@
 
   <!-- SERVICES -->
 
-  <section class="services" id="services">
+  <section id="services">
 
-    <div class="section-label">
-      What We Do
-    </div>
+    <h2 class="section-title">Our Services</h2>
 
-    <h2 class="section-title">
-      Our Services
-    </h2>
+    <p class="section-intro">
+      Models available for creative projects, campaigns and professional
+      visual content.
+    </p>
 
     <div class="services-grid">
 
       <div class="service">
-
-        <div class="service-number">
-          01
-        </div>
-
-        <h3>
-          Beauty
-        </h3>
-
+        <h3>Beauty</h3>
         <p>
-          Beauty campaigns, makeup portfolios, skincare content and
-          close-up beauty photography.
+          Beauty campaigns, makeup portfolios, skincare content
+          and close-up beauty photography.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div class="service-number">
-          02
-        </div>
-
-        <h3>
-          Commercial
-        </h3>
-
+        <h3>Commercial</h3>
         <p>
-          Visual content for brands, products, advertising and
-          promotional campaigns.
+          Visual content for brands, products, advertising
+          and promotional campaigns.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div class="service-number">
-          03
-        </div>
-
-        <h3>
-          Editorial
-        </h3>
-
+        <h3>Editorial</h3>
         <p>
           Creative concepts, fashion stories and magazine-inspired
-          photography.
+          photography projects.
         </p>
-
       </div>
 
     </div>
@@ -666,55 +573,36 @@
 
   <!-- MODELS -->
 
-  <section id="models">
+  <section class="models" id="models">
 
-    <div class="models-header">
+    <h2 class="section-title">Our Models</h2>
 
-      <div class="section-label">
-        Our Faces
-      </div>
-
-      <h2 class="section-title">
-        Meet the Models
-      </h2>
-
-      <p>
-        Browse our available faces and book the model that fits
-        your creative brief.
-      </p>
-
-    </div>
+    <p class="section-intro">
+      Discover selected Adraz faces available for beauty, commercial
+      and editorial bookings.
+    </p>
 
 
     <div class="models-grid">
 
 
-      <!-- MODEL 01 -->
+      <!-- MODEL 1 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2378.jpeg"
-          alt="Adraz Model 01">
+        <img src="IMG_2378.jpeg" alt="Adesola - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 01
-          </div>
+          <h3>Adesola</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2001."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Adesola."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -722,32 +610,23 @@
       </div>
 
 
-      <!-- MODEL 02 -->
+      <!-- MODEL 2 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2382.jpeg"
-          alt="Adraz Model 02">
+        <img src="IMG_2382.jpeg" alt="Ayomide - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 02
-          </div>
+          <h3>Ayomide</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2002."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Ayomide."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -755,32 +634,23 @@
       </div>
 
 
-      <!-- MODEL 03 -->
+      <!-- MODEL 3 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2377.jpeg"
-          alt="Adraz Model 03">
+        <img src="IMG_2377.jpeg" alt="Yanmipe - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 03
-          </div>
+          <h3>Yanmipe</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2003."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Yanmipe."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -788,32 +658,23 @@
       </div>
 
 
-      <!-- MODEL 04 -->
+      <!-- MODEL 4 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2126.jpeg"
-          alt="Adraz Model 04">
+        <img src="IMG_2126.jpeg" alt="Khaaliqat - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 04
-          </div>
+          <h3>Khaaliqat</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2004."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Khaaliqat."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -821,32 +682,23 @@
       </div>
 
 
-      <!-- MODEL 05 -->
+      <!-- MODEL 5 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2113.jpeg"
-          alt="Adraz Model 05">
+        <img src="IMG_2113.jpeg" alt="Dorcas - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 05
-          </div>
+          <h3>Dorcas</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2005."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Dorcas."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -854,32 +706,23 @@
       </div>
 
 
-      <!-- MODEL 06 -->
+      <!-- MODEL 6 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2090.jpeg"
-          alt="Adraz Model 06">
+        <img src="IMG_2090.jpeg" alt="Arike - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 06
-          </div>
+          <h3>Arike</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2006."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Arike."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -887,32 +730,23 @@
       </div>
 
 
-      <!-- MODEL 07 -->
+      <!-- MODEL 7 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2381.jpeg"
-          alt="Adraz Model 07">
+        <img src="IMG_2381.jpeg" alt="Adedoyin - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 07
-          </div>
+          <h3>Adedoyin</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2007."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Adedoyin."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -920,32 +754,23 @@
       </div>
 
 
-      <!-- MODEL 08 -->
+      <!-- MODEL 8 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2380.jpeg"
-          alt="Adraz Model 08">
+        <img src="IMG_2380.jpeg" alt="Priscilla - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 08
-          </div>
+          <h3>Priscilla</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2008."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Priscilla."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -953,32 +778,23 @@
       </div>
 
 
-      <!-- MODEL 09 -->
+      <!-- MODEL 9 -->
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2106.jpeg"
-          alt="Adraz Model 09">
+        <img src="IMG_2106.jpeg" alt="Tife - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 09
-          </div>
+          <h3>Tife</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2009."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Tife."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -990,28 +806,19 @@
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2110.jpeg"
-          alt="Adraz Model 10">
+        <img src="IMG_2110.jpeg" alt="Michelle - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 10
-          </div>
+          <h3>Michelle</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2010."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Michelle."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -1023,28 +830,19 @@
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2116.jpeg"
-          alt="Adraz Model 11">
+        <img src="IMG_2116.jpeg" alt="Tomi - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 11
-          </div>
+          <h3>Tomi</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2011."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Tomi."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -1056,28 +854,19 @@
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2142.jpeg"
-          alt="Adraz Model 12">
+        <img src="IMG_2142.jpeg" alt="Blessing - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 12
-          </div>
+          <h3>Blessing</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2012."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Blessing."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -1089,28 +878,19 @@
 
       <div class="model-card">
 
-        <img
-          class="model-image"
-          src="IMG_2081.jpeg"
-          alt="Adraz Model 13">
+        <img src="IMG_2081.jpeg" alt="Faustina - Adraz Model">
 
         <div class="model-info">
 
-          <div class="model-name">
-            Model 13
-          </div>
+          <h3>Faustina</h3>
 
-          <div class="model-type">
-            Beauty · Commercial · Editorial
-          </div>
+          <p>Beauty · Commercial · Editorial</p>
 
           <a
-            class="book-btn"
-            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%2013."
+            class="model-btn"
+            href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20would%20like%20to%20book%20Faustina."
             target="_blank">
-
-            Book This Model →
-
+            Book This Model
           </a>
 
         </div>
@@ -1120,88 +900,64 @@
 
     </div>
 
+
+    <!-- MORE MODELS AVAILABLE -->
+
+    <div class="more-models">
+
+      <h3>Looking for more?</h3>
+
+      <p>
+        These are selected models from the Adraz roster.
+        We have additional models available in different looks,
+        styles and profiles. Tell us what your project needs and
+        we'll help you find the right fit.
+      </p>
+
+      <br>
+
+      <a
+        class="btn"
+        href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%20am%20looking%20for%20a%20model%20for%20my%20project.%20Please%20show%20me%20more%20available%20models."
+        target="_blank">
+        Ask About More Models
+      </a>
+
+    </div>
+
   </section>
 
 
   <!-- BOOKING PROCESS -->
 
-  <section class="booking">
+  <section>
 
-    <div class="section-label">
-      Simple Booking
-    </div>
+    <h2 class="section-title">How Booking Works</h2>
 
-    <h2 class="section-title">
-      From Brief to Booking
-    </h2>
+    <div class="process-grid">
 
-    <div class="booking-grid">
-
-      <div class="step">
-
-        <div class="step-number">
-          01
-        </div>
-
-        <h3>
-          Share
-        </h3>
-
-        <p>
-          Tell us about your project and requirements.
-        </p>
-
+      <div class="process-step">
+        <div class="number">01</div>
+        <h3>Share</h3>
+        <p>Tell us about your project, date and requirements.</p>
       </div>
 
-
-      <div class="step">
-
-        <div class="step-number">
-          02
-        </div>
-
-        <h3>
-          Match
-        </h3>
-
-        <p>
-          We recommend a model suited to your brief.
-        </p>
-
+      <div class="process-step">
+        <div class="number">02</div>
+        <h3>Match</h3>
+        <p>We recommend models suited to your creative brief.</p>
       </div>
 
-
-      <div class="step">
-
-        <div class="step-number">
-          03
-        </div>
-
-        <h3>
-          Confirm
-        </h3>
-
-        <p>
-          Confirm the model, date, duration and booking.
-        </p>
-
+      <div class="process-step">
+        <div class="number">03</div>
+        <h3>Confirm</h3>
+        <p>Confirm availability, booking details and payment.</p>
       </div>
 
-
-      <div class="step">
-
-        <div class="step-number">
-          04
-        </div>
-
-        <h3>
-          Create
-        </h3>
-
-        <p>
-          Bring your concept to life with Adraz.
-        </p>
-
+      <div class="process-step">
+        <div class="number">04</div>
+        <h3>Create</h3>
+        <p>Bring your concept to life with your selected model.</p>
       </div>
 
     </div>
@@ -1213,67 +969,28 @@
 
   <section class="why">
 
-    <div class="section-label">
-      Why Adraz
-    </div>
-
-    <h2 class="section-title">
-      More than a pretty face.
-    </h2>
+    <h2 class="section-title">Why Adraz</h2>
 
     <div class="why-grid">
 
       <div class="why-item">
-
-        <h3>
-          The Right Fit
-        </h3>
-
-        <p>
-          Models selected according to your creative direction,
-          concept and project needs.
-        </p>
-
+        <h3>The Right Fit</h3>
+        <p>Models selected to suit your project's look and brief.</p>
       </div>
 
-
       <div class="why-item">
-
-        <h3>
-          Clear Communication
-        </h3>
-
-        <p>
-          Straightforward communication from enquiry to confirmed booking.
-        </p>
-
+        <h3>Clear Communication</h3>
+        <p>Simple and professional communication from booking to shoot day.</p>
       </div>
 
-
       <div class="why-item">
-
-        <h3>
-          Professional Approach
-        </h3>
-
-        <p>
-          We value punctuality, professionalism and respectful
-          collaboration.
-        </p>
-
+        <h3>Professional Approach</h3>
+        <p>We value punctuality, conduct and a smooth creative experience.</p>
       </div>
 
-
       <div class="why-item">
-
-        <h3>
-          Local Reach
-        </h3>
-
-        <p>
-          Access to facial models in Ibadan and Abeokuta.
-        </p>
-
+        <h3>Local Reach</h3>
+        <p>Models available across Ibadan and Abeokuta.</p>
       </div>
 
     </div>
@@ -1285,41 +1002,34 @@
 
   <section class="contact" id="contact">
 
-    <div>
+    <h2>Let's Create.</h2>
 
-      <div class="section-label">
-        Ready to Create?
-      </div>
+    <p>
+      Looking for a model for your next makeup session, campaign,
+      brand project, photoshoot or editorial concept?
+      Get in touch with Adraz Model Management.
+    </p>
 
-      <h2>
-        Let's bring<br>
-        your vision to life.
-      </h2>
+    <a
+      class="btn"
+      href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%20would%20like%20to%20make%20a%20booking."
+      target="_blank">
+      WhatsApp Us
+    </a>
 
-      <p>
-        BEAUTY · COMMERCIAL · EDITORIAL
-      </p>
+    <div class="social-links">
 
       <a
-        class="btn"
-        href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%27d%20like%20to%20book%20a%20model."
+        href="https://www.instagram.com/Adraz_models/"
         target="_blank">
-
-        Book a Model
-
+        Instagram · @adraz_models
       </a>
 
-      <div class="social">
-
-        <a
-          href="https://www.instagram.com/Adraz_models/"
-          target="_blank">
-
-          Instagram · @Adraz_models
-
-        </a>
-
-      </div>
+      <a
+        href="https://wa.me/2348139914197"
+        target="_blank">
+        WhatsApp · 08139914197
+      </a>
 
     </div>
 
@@ -1330,19 +1040,14 @@
 
   <footer>
 
-    <div class="footer-logo">
-      ADRAZ
-    </div>
+    ADRAZ MODEL MANAGEMENT · IBADAN · ABEOKUTA · NIGERIA
 
-    <p>
-      Model Management · Ibadan · Abeokuta · Nigeria
-    </p>
+    <br><br>
 
-    <p style="margin-top: 10px;">
-      © 2026 Adraz Model Management
-    </p>
+    © 2026 Adraz Model Management. All rights reserved.
 
   </footer>
+
 
 </body>
 </html>
