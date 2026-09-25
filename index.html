@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adraz Model Management | Ibadan & Abeokuta Models</title>
+
+<meta name="description" content="Adraz Model Management connects makeup artists, photographers, brands and creatives with professional models in Ibadan and Abeokuta.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #f5f1e8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11,11,11,0.94);
+    border-bottom: 1px solid #2d2923;
+    backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 21px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 5px;
+    color: #c8a96b;
+    margin-top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: #c8a96b;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.82)),
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding-top: 70px;
+}
+
+.eyebrow {
+    color: #c8a96b;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 8vw, 90px);
+    line-height: .98;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 560px;
+    color: #d7d0c5;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.location {
+    margin-top: 22px;
+    letter-spacing: 3px;
+    font-size: 11px;
+    color: #c8a96b;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 15px 27px;
+    border: 1px solid #c8a96b;
+    color: #f5f1e8;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #c8a96b;
+    color: #111;
+}
+
+.btn-gold {
+    background: #c8a96b;
+    color: #111;
+    margin-right: 10px;
+}
+
+.btn-gold:hover {
+    background: #e0c58b;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: #c8a96b;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 14px;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(35px, 5vw, 58px);
+    margin-bottom: 25px;
+}
+
+.section-text {
+    max-width: 720px;
+    color: #bdb7ad;
+    font-size: 16px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #f2eee6;
+    color: #161616;
+}
+
+.about .section-text {
+    color: #55504a;
+}
+
+/* SERVICES */
+
+.services {
+    background: #101010;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.service {
+    border: 1px solid #302c27;
+    padding: 35px 28px;
+    min-height: 220px;
+    transition: .3s;
+}
+
+.service:hover {
+    border-color: #c8a96b;
+    transform: translateY(-5px);
+}
+
+.service-number {
+    color: #c8a96b;
+    font-size: 13px;
+}
+
+.service h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 35px 0 15px;
+}
+
+.service p {
+    color: #aaa49b;
+    font-size: 14px;
+}
+
+/* MODELS */
+
+.models {
+    background: #0b0b0b;
+}
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.model-card {
+    background: #151515;
+    overflow: hidden;
+}
+
+.model-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+
+.model-card:hover .model-photo {
+    transform: scale(1.04);
+}
+
+.model-info {
+    padding: 20px;
+}
+
+.model-info h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.model-info p {
+    color: #999;
+    font-size: 12px;
+    margin: 5px 0 15px;
+}
+
+.model-btn {
+    color: #c8a96b;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* HOW IT WORKS */
+
+.process {
+    background: #f2eee6;
+    color: #161616;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-number {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    color: #c8a96b;
+}
+
+.step h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+}
+
+.step p {
+    color: #5f5a54;
+    font-size: 14px;
+}
+
+/* WHY ADRAZ */
+
+.why {
+    background: #101010;
+}
+
+.points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.point {
+    border-top: 1px solid #3a352e;
+    padding: 22px 0;
+}
+
+.point h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.point p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+    background:
+        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    text-align: center;
+}
+
+.contact .section-title {
+    max-width: 750px;
+    margin: 0 auto 20px;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #ccc;
+}
+
+.social {
+    margin-top: 30px;
+    color: #c8a96b;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 0;
+    border-top: 1px solid #2b2824;
+    text-align: center;
+    background: #080808;
+}
+
+footer strong {
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .service-grid,
+    .model-grid,
+    .process-grid,
+    .points {
+        grid-template-columns: 1fr;
+    }
+
+    .model-photo {
+        height: 470px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-inner">
+
+<div class="logo">
+ADRAZ
+<span>MODEL MANAGEMENT</span>
+</div>
+
+<div class="nav-links">
+<a href="#models">Models</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Adraz Model Management
+</div>
+
+<h1>
+The face of your next campaign.
+</h1>
+
+<p>
+Connecting makeup artists, photographers, brands and creatives with models who bring creative visions to life.
+</p>
+
+<a class="btn btn-gold"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%27d%20like%20to%20enquire%20about%20booking%20a%20model.">
+Enquire About a Model
+</a>
+
+<a class="btn" href="#models">
+View Models
+</a>
+
+<div class="location">
+IBADAN · ABEOKUTA · NIGERIA
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-label">
+About Adraz
+</div>
+
+<h2 class="section-title">
+Talent. Vision. Representation.
+</h2>
+
+<p class="section-text">
+Adraz Model Management is a facial modelling agency connecting creatives and brands with talent for beauty, commercial and editorial projects.
+</p>
+
+<br>
+
+<p class="section-text">
+Based in Ibadan and serving Abeokuta, we make it easier to discover and book models suited to your creative brief.
+</p>
+
+<br>
+
+<p class="section-text">
+From beauty campaigns and makeup portfolios to brand content and editorial shoots, we help bring ideas to life through the right faces, professional communication and a seamless booking experience.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-label">
+What We Offer
+</div>
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="service-grid">
+
+<div class="service">
+<div class="service-number">01</div>
+<h3>Beauty</h3>
+<p>
+Beauty campaigns, makeup portfolios, skincare content and close-up beauty photography.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<h3>Commercial</h3>
+<p>
+Visual content for brands, products, advertising and promotional campaigns.
+</p>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<h3>Editorial</h3>
+<p>
+Creative concepts, fashion stories and magazine-inspired photography.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MODELS -->
+
+<section class="models" id="models">
+
+<div class="container">
+
+<div class="section-label">
+Our Talent
+</div>
+
+<h2 class="section-title">
+Meet Our Models
+</h2>
+
+<p class="section-text">
+A curated selection of faces for your next creative project.
+</p>
+
+
+<div class="model-grid">
+
+
+<!-- MODEL 1 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 01">
+
+<div class="model-info">
+
+<h3>Model One</h3>
+
+<p>Ibadan · Beauty · Commercial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20One.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 2 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 02">
+
+<div class="model-info">
+
+<h3>Model Two</h3>
+
+<p>Abeokuta · Beauty · Editorial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Two.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 3 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 03">
+
+<div class="model-info">
+
+<h3>Model Three</h3>
+
+<p>Ibadan · Beauty · Editorial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Three.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 4 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 04">
+
+<div class="model-info">
+
+<h3>Model Four</h3>
+
+<p>Ibadan · Commercial · Beauty</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Four.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 5 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1496440737103-cd596325d314?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 05">
+
+<div class="model-info">
+
+<h3>Model Five</h3>
+
+<p>Abeokuta · Beauty · Commercial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Five.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 6 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 06">
+
+<div class="model-info">
+
+<h3>Model Six</h3>
+
+<p>Ibadan · Editorial · Beauty</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Six.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 7 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 07">
+
+<div class="model-info">
+
+<h3>Model Seven</h3>
+
+<p>Abeokuta · Beauty · Commercial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Seven.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 8 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 08">
+
+<div class="model-info">
+
+<h3>Model Eight</h3>
+
+<p>Ibadan · Beauty · Editorial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Eight.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+<!-- MODEL 9 -->
+
+<div class="model-card">
+
+<img class="model-photo"
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85"
+alt="Adraz Model 09">
+
+<div class="model-info">
+
+<h3>Model Nine</h3>
+
+<p>Abeokuta · Commercial · Editorial</p>
+
+<a class="model-btn"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%2C%20I%27m%20interested%20in%20booking%20Model%20Nine.">
+Book This Model →
+</a>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="process">
+
+<div class="container">
+
+<div class="section-label">
+Booking
+</div>
+
+<h2 class="section-title">
+Your Vision. Our Talent.
+</h2>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Share Your Brief</h3>
+<p>
+Tell us about your project, date, location and model requirements.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Find Your Match</h3>
+<p>
+We'll recommend available models suited to your creative brief.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Confirm</h3>
+<p>
+Review the quote, duration and booking arrangements.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Create</h3>
+<p>
+Bring your vision to life with Adraz.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY ADRAZ -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-label">
+Why Adraz
+</div>
+
+<h2 class="section-title">
+Professional Talent. Seamless Booking.
+</h2>
+
+<div class="points">
+
+<div class="point">
+<h3>The Right Fit</h3>
+<p>
+We match talent to your project's concept and requirements.
+</p>
+</div>
+
+<div class="point">
+<h3>Clear Communication</h3>
+<p>
+Straightforward enquiries and booking arrangements.
+</p>
+</div>
+
+<div class="point">
+<h3>Professional Approach</h3>
+<p>
+We value punctuality, preparation and respectful collaboration.
+</p>
+</div>
+
+<div class="point">
+<h3>Local Reach</h3>
+<p>
+Talent available for projects in Ibadan and Abeokuta.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-label">
+Let's Work Together
+</div>
+
+<h2 class="section-title">
+Let's bring your vision to life.
+</h2>
+
+<p>
+Looking for the right face for your next shoot, campaign or creative project? We'd love to hear from you.
+</p>
+
+<a class="btn btn-gold"
+href="https://wa.me/2348139914197?text=Hello%20Adraz%20Model%20Management%2C%20I%27d%20like%20to%20enquire%20about%20booking%20a%20model.">
+Book a Model
+</a>
+
+<div class="social">
+<a href="https://www.instagram.com/Adraz_models/" target="_blank">
+Instagram · @Adraz_models
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>ADRAZ MODEL MANAGEMENT</strong>
+
+<p>
+Ibadan · Abeokuta · Nigeria
+</p>
+
+<p>
+© 2026 Adraz Model Management. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
